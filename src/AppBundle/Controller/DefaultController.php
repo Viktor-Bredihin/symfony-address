@@ -16,7 +16,9 @@ class DefaultController extends Controller
     {
         $form = $this->createFormBuilder()
             ->add('postcode', TextType::class)
+            ->add('country', TextType::class)
             ->add('state', TextType::class)
+            ->add('city', TextType::class)
             ->add('street', TextType::class)
             ->add('number', TextType::class)
             ->getForm();

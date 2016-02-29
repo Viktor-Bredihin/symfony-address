@@ -5,10 +5,40 @@
     <div id="wrapper">
         <div id="container">
             {{ form_start(form) }}
-            {{ form_widget(form) }}
-            <div class="form-group">
-                <button type="submit" class="btn btn-success">Save</button>
-            </div>
+                <div class="form-group">
+                    {{ form_label(form.postcode) }}
+                    {{ form_errors(form.postcode) }}
+                    {{ form_widget(form.postcode, {'id': 'postal_code'}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.country) }}
+                    {{ form_errors(form.country) }}
+                    {{ form_widget(form.country, {'id': 'country', 'attr': {'disabled': true}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.state) }}
+                    {{ form_errors(form.state) }}
+                    {{ form_widget(form.state, {'id': 'administrative_area_level_1', 'attr': {'disabled': true}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.city) }}
+                    {{ form_errors(form.city) }}
+                    {{ form_widget(form.city, {'id': 'locality', 'attr': {'disabled': true}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.street) }}
+                    {{ form_errors(form.street) }}
+                    {{ form_widget(form.street, {'id': 'route'}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.number) }}
+                    {{ form_errors(form.number) }}
+                    {{ form_widget(form.number, {'id': 'street_number'}) }}
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Save</button>
+                </div>
             {{ form_end(form) }}
         </div>
     </div>

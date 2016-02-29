@@ -37,7 +37,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
-
+    globals:
+        google_key: AIzaSyD45f0w-fZh6STEIeJtqp8YSseBDrFTug8
 # Doctrine Configuration
 doctrine:
     dbal:
